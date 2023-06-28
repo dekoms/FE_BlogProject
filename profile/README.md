@@ -9,13 +9,11 @@
 ### Commit message 구조
 기본적으로 commit message는 제목, 본문, 꼬리말로 구성합니다.
 제목은 필수사항이며, 본문과 꼬리말은 선택사항입니다.
-
 ```
 <type>: <subject>
 <body>
 <footer>
 ```
-
 
 - Type
   - feat: 새로운 기능 추가, 기존의 기능을 요구 사항에 맞추어 수정
