@@ -7,14 +7,19 @@
 6. 본문을 어떻게 보다 무엇을, 왜에 대하여 설명
 
 ### Commit message 구조
+기본적으로 commit message는 제목, 본문, 꼬리말로 구성합니다.
+제목은 필수사항이며, 본문과 꼬리말은 선택사항입니다.
+
 ```
 <type>: <subject>
 <body>
 <footer>
 ```
 
+
 - Type
-  -feat: 새로운 기능 추가, 기존의 기능을 요구 사항에 맞추어 수정
+  
+  - feat: 새로운 기능 추가, 기존의 기능을 요구 사항에 맞추어 수정
   -fix: 기능에 대한 버그 수정
   -build: 빌드 관련 수정
   -chore: 패키지 매니저 수정, 그 외 기타 수정 ex) .gitignore
@@ -26,13 +31,16 @@
   -release: 버전 릴리즈
   
 - Subject
+  
   Type과 함께 헤더를 구성합니다. 예를들어, 로그인 API를 추가했다면 다음과 같이 구성할 수 있습니다.
   `ex) feat: Add login api`
   
 - Body
+  
   헤더로 표현이 가능하다면 생략이 가능합니다. 아닌 경우에는 자세한 내용을 함께 적어 본문을 구성합니다.
   
 - Footer
+  
   어떠한 이슈에 대한 commit인지 issue number를 포함합니다. `ex) (#1)`
   그리고 `close #1`처럼 close를 통해 해당 이슈를 닫는 방법도 있습니다.
 
