@@ -1,4 +1,6 @@
-function Main(){
+import React from "react";
+
+function HomePage(){
 
     return (
         <>
@@ -13,4 +15,4 @@ function Main(){
     );
 }
 
-export default Main;
+export default HomePage;

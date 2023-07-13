@@ -1,9 +1,11 @@
-function Main(){
+import React from "react";
+
+function GuestBookPage(){
 
     return (
         <>
             <List/>
-            <Home/>
+            <GuestBook/>
             
             <Routes>
                 <Route path="" element={<Body/>}></Route>
@@ -12,4 +14,4 @@ function Main(){
     );
 }
 
-export default Main;
+export default GuestBookPage;

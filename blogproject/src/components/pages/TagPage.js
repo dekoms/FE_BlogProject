@@ -1,10 +1,12 @@
-function Main(){
+import React from "react";
+import Tag from "../Tag";
+
+function TagPage(){
 
     return (
         <>
-            <Img/>
             <List/>
-            <Home/>
+            <Tag/>
             
             <Routes>
                 <Route path="" element={<Body/>}></Route>
@@ -13,4 +15,4 @@ function Main(){
     );
 }
 
-export default Main;
+export default TagPage;
