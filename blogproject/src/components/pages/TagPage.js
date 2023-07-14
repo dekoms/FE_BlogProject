@@ -1,16 +1,20 @@
-import React from "react";
 import Tag from "../Tag";
+import List from "../List";
+import styled from "styled-components"
 
 function TagPage(){
+    const StyledBody = styled.div`
+        display: flex;
+        flex-direction: row;
+    `;
 
     return (
         <>
-            <List/>
-            <Tag/>
-            
-            <Routes>
-                <Route path="" element={<Body/>}></Route>
-            </Routes>
+        <div> Tag page </div>
+            <StyledBody>
+                <List/>
+                <Tag/>
+            </StyledBody>
         </>
     );
 }

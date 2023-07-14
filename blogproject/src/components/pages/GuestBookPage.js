@@ -1,15 +1,22 @@
-import React from "react";
+import List from "../List"
+import GuestBook from "../GuestBook"
+import styled from "styled-components"
+
 
 function GuestBookPage(){
+    const StyledBody = styled.div`
+        display: flex;
+        flex-direction: row;
+    `;
 
     return (
         <>
-            <List/>
-            <GuestBook/>
+        <div> GuestBook page </div>
+            <StyledBody>
+                <List/>
+                <GuestBook/>
+            </StyledBody>
             
-            <Routes>
-                <Route path="" element={<Body/>}></Route>
-            </Routes>
         </>
     );
 }

@@ -1,45 +1,51 @@
-import { List } from ".";
+import {Link, useNavigate} from "react-router-dom"
+import styled from "styled-components"
 
 function List(){
-    const viewCategories = (e) => {
-        {/* 페이지 Body 부분 리렌더링 */}
-    }
-    const viewNotices = (e) => {
-        {/* 페이지 Body 부분 리렌더링 */}
-    }
-    const latestWriting = (e) => {
-        {/* 페이지 Body 부분 리렌더링 */}
-    }
+    const StyledBody = styled.div`
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    `;
+    const StyledButtons = styled.div`
+        display: flex;
+        flex-direction: row;
+    `;
 
-    const viweLatestWriting = (e) => {
-        {/* 페이지 Body 부분 리렌더링 */}
-    }
-    const viewTags = (e) => {
-        {/* 페이지 Body 부분 리렌더링 */}
-    }
+    const navigate = useNavigate();
 
-    const eachTags = (e) => {
-        {/*각 태그들을 누를 때 태그에 해당하는 글 나열*/}
+    const navigateToFirst = () => {
+        navigate("/first");
+    }
+    const navigateToBlog = () => {
+        navigate("/blog");
+    }
+    const navigateToNew = () => {
+        navigate("/new");
     }
 
     return (
-        <>
-            <button onClick={viewCategories}>분류 전체보기</button>
+        <StyledBody>
+            <Link to="/">분류 전체보기</Link>
             <p>데이터 필요</p>
 
-            <button onClick={viewNotices}>공지사항</button>
+            <Link to="/">공지사항</Link>
             <p>데이터 필요</p>
 
-            <button onClick={latestWriting}>최근글</button>
-            <button onClick={viweLatestWriting}>데이터 필요</button>
-            <img>데이터 필요</img>
+            <Link to="/">최근글</Link>
+            <Link to="/">데이터 필요-컴포넌트</Link>
+            {/*<img></img>*/}
 
             <p>최근댓글</p>
             <p>데이터 필요</p>
 
-            <button onClick={viewTags}>태그</button>
-            <button onClick={{/*태그가 생성될 때마다 새로운 버튼이 생성되어야 함*/}}>데이터 필요</button>
-        </>
+            <Link to="/TagPage">태그</Link>
+            <StyledButtons>
+                <button onClick={navigateToFirst}>첫글</button>
+                <button onClick={navigateToBlog}>블로그</button>
+                <button onClick={navigateToNew}>새글</button>
+            </StyledButtons>
+        </StyledBody>
     );
 }
 
